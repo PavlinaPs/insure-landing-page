@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    //position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     max-width: 144rem;
@@ -49,6 +50,7 @@
             left: 0;
             right: 0;
             height: 58.7rem;
+            width: 37.5rem;
             text-align: center;
             background-color: var(--clr-very-dark-violet);
             background-image: url(../../images/bg-pattern-mobile-nav.svg);

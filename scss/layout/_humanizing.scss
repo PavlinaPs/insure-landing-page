@@ -1,6 +1,81 @@
 @use "../abstracts/" as *;
 
 .landing__humanizing {
-    margin-top: 40rem;
-    height: 100rem;
+    position: relative;
+    //margin-top: 8.2rem;
+    height: 95.2rem;
+    color: var(--clr-white);
+    text-align: center;
+    background-color: var(--clr-dark-violet);
+    background-image: url(../../images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left 45rem;
+}
+
+.humanizing__image--mobile {
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.humanizing__image--desktop {
+    display: none;
+
+    @media (min-width: $desktop) {
+        display: block;
+    }
+}
+
+.humanizing__text-container {
+    margin-top: 9.4rem;
+    padding: 0 2rem;
+}
+
+.humanizing__title {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-h1-mobile);
+    font-weight: var(--fw-regular);
+    line-height: 1;
+}
+
+.humanizing__text {
+    margin-top: 1.6rem;
+    padding: 0 1rem;
+    font-family: var(--ff-body);
+    font-size: var(--fs-normal-mobile);
+    color: var(--clr-very-light-gray);
+    line-height: 1.6;
+}
+
+.humanizing__button {
+    width: 14.6rem;
+    margin-top: 3.4rem;
+    padding: 1.1rem 0 1rem;
+    font-family: var(--ff-body);
+    font-size: var(--fs-button-mobile);
+    color: var(--clr-very-light-gray);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    border: 0.2rem solid var(--clr-very-light-gray);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        font-weight: var(--fw-bold);
+        color: var(--clr-very-dark-violet);
+        background-color: var(--clr-very-light-gray);
+    }
+}
+
+.humanizing__illustration--right-mobile {
+    position: absolute;
+    right: 0;
+    bottom: -17.7rem;
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
 }
