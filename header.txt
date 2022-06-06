@@ -1,0 +1,123 @@
+@use "../abstracts/" as *;
+
+.landing__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2.4rem 2.5rem;
+    background-color: var(--clr-white);
+    z-index: 10;
+    
+    @media (min-width: $desktop) {
+        padding: 0rem 16.5rem;
+    }
+}
+
+.header__nav {
+    display: none;
+    text-transform: uppercase;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-bold);
+
+    &.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 7.9rem;
+        left: 0;
+        right: 0;
+        height: 58.7rem;
+        text-align: center;
+        background-color: var(--clr-very-dark-violet);
+        background-image: url(../../images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+
+
+    }
+}
+
+.header__nav__item {
+    margin-top: 4.2rem;
+    cursor: pointer;
+}
+
+.header__nav__item:first-child {
+    margin-top: 5rem;
+}
+
+.header__nav__item:last-child {
+    margin: 3.2rem 2rem 0;
+    padding: 1.5rem 0;
+    border: 0.2rem solid var(--clr-white);
+
+    &:hover,
+    &:focus{
+        background-color: var(--clr-white);
+        border: 0.2rem solid var(--clr-very-dark-violet);
+    }
+
+    &:hover a,
+    &:focus a{
+        color: var(--clr-very-dark-violet);
+    }
+}
+
+.header__nav__item a {
+    font-size: var(--fs-nav-mobile);
+    color: var(--clr-white);
+    letter-spacing: 0.2rem;
+
+    &:hover,
+    &:focus {
+        color: var(--clr-grayish-blue);
+    }
+
+    @media (min-width: $desktop) {
+        font-size: var(--fs-nav-mobile);
+        color: var(--clr-dark-grayish-violet);
+        letter-spacing: 0.2rem;
+
+        &:hover,
+        &:focus {
+            color: var(--clr-grayish-blue);
+        }
+    }
+}
+
+.header__hamburger {
+    display: block;
+    cursor: pointer;
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+// ~ general following sibling
+.header__nav.open ~ .header__hamburger {
+    display: none;
+}
+
+.header__close {
+    display: none;
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.header__nav.open ~ .header__close {
+    display: block;
+    cursor: pointer;
+}
+
+

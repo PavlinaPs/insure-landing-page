@@ -1,0 +1,76 @@
+@use '../abstracts/' as *;
+
+.landing__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 144rem;
+    height: 8.2rem;
+    padding: 0 16rem 0 16.8rem;
+    font-family: var(--ff-body);
+    font-size: var(--fs-nav-desktop);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+    background-color: var(--clr-white);
+    z-index: 10;
+
+    border: 1px solid dodgerblue;
+}
+
+.header__logo {
+    padding-bottom: 0.3rem;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.header__nav__item a {
+    color: var(--clr-dark-grayish-violet);
+
+    &:hover,
+    &:focus{
+        color: var(--clr-very-dark-violet);
+    }
+}
+
+.header__nav__item:last-child {
+    margin-left: 0.2rem;
+    padding: 1rem 2.8rem;
+    border: 0.2rem solid var(--clr-very-dark-violet);
+
+    & a {
+        color: var(---clr-very-dark-violet);
+    }
+
+    &:hover,
+    &:focus{
+        background-color: var(--clr-very-dark-violet);
+    }
+
+    &:hover a,
+    &:focus a {
+        color: var(--clr-white);
+    }
+}
+
+
+
+.header__hamburger {
+    display: none;
+
+    @media (max-width: $max-mobile) {
+        display: block;
+    }
+}
+
+.header__close {
+    display: none;
+}
