@@ -10,6 +10,7 @@
     max-width: 144rem;
     height: 8.2rem;
     padding: 0 16rem 0 16.8rem;
+
     font-family: var(--ff-body);
     font-size: var(--fs-nav-desktop);
     font-weight: var(--fw-bold);
@@ -20,6 +21,11 @@
     z-index: 10;
 
     border: 1px solid dodgerblue;
+
+    @media (max-width: $max-mobile) {
+        width: 37.5rem;
+        padding: 0 2rem 0 2rem;
+    }
 }
 
 .header__logo {
@@ -30,6 +36,72 @@
     display: flex;
     align-items: center;
     gap: 2.5rem;
+
+    @media (max-width: $max-mobile) {
+        display: none;
+
+        &.open {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 7.9rem;
+            left: 0;
+            right: 0;
+            height: 58.7rem;
+            text-align: center;
+            background-color: var(--clr-very-dark-violet);
+            background-image: url(../../images/bg-pattern-mobile-nav.svg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            .header__nav__item {
+                width: 87%;
+                margin-top: 4.2rem;
+                cursor: pointer;
+            }
+            
+            .header__nav__item:first-child {
+                margin-top: 5rem;
+            }
+            
+            .header__nav__item:last-child {
+                margin: 3.2rem 0rem 0;
+                padding: 1.8rem 0 1.4rem;
+                border: 0.1rem solid var(--clr-white);
+            
+                &:hover,
+                &:focus{
+                    background-color: var(--clr-white);
+                    border: 0.2rem solid var(--clr-very-dark-violet);
+                }
+            
+                &:hover a,
+                &:focus a{
+                    color: var(--clr-very-dark-violet);
+                }
+            }
+
+            .header__nav__item a {
+                font-size: var(--fs-nav-mobile);
+                color: var(--clr-white);
+                letter-spacing: 0.2rem;
+            
+                &:hover,
+                &:focus {
+                    color: var(--clr-grayish-blue);
+                }
+            }
+
+            & ~ .header__hamburger {
+                display: none;
+            }
+
+            & ~ .header__close {
+                display: block;
+            }
+        }
+    }
 }
 
 .header__nav__item a {
@@ -61,16 +133,21 @@
     }
 }
 
-
-
 .header__hamburger {
     display: none;
+    cursor: pointer;
 
     @media (max-width: $max-mobile) {
         display: block;
     }
 }
 
+
 .header__close {
     display: none;
+    cursor: pointer;
+
+    @media (max-width: $max-mobile) {
+        display: none;
+    }
 }
