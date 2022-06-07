@@ -10,10 +10,20 @@
     background-image: url(../../images/bg-pattern-intro-left-mobile.svg);
     background-repeat: no-repeat;
     background-position: left 45rem;
+
+    @media (min-width: $desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'text image';
+        height: 59.8rem;
+        padding: 10.55rem 13rem 0 16.8rem;
+        text-align: left;
+        background-image: none;
+    }
+
 }
 
 .humanizing__image--mobile {
-
     @media (min-width: $desktop) {
         display: none;
     }
@@ -23,13 +33,21 @@
     display: none;
 
     @media (min-width: $desktop) {
+        grid-area: image;
         display: block;
     }
 }
 
 .humanizing__text-container {
+    grid-area: text;
     margin-top: 9.4rem;
     padding: 0 2rem;
+    
+    @media (min-width: $desktop) {
+        position: relative;
+        margin-top: 6.1rem;
+        padding: 0;
+    }
 }
 
 .humanizing__title {
@@ -37,6 +55,21 @@
     font-size: var(--fs-h1-mobile);
     font-weight: var(--fw-regular);
     line-height: 1;
+
+    @media (min-width: $desktop) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: -6.3rem;
+            left: 0;
+            width: 15rem;
+            height: 0.2rem;
+            background-color: var(--clr-dark-grayish-violet);
+        }
+        padding-right: 4rem;
+        font-size: var(--fs-h1-desktop);
+        line-height: 0.95;
+    }
 }
 
 .humanizing__text {
@@ -46,6 +79,13 @@
     font-size: var(--fs-normal-mobile);
     color: var(--clr-very-light-gray);
     line-height: 1.6;
+
+    @media (min-width: $desktop) {
+        margin-top: 2.5rem;
+        padding: 0;
+        padding-right: 3rem;
+        font-size: var(--fs-normal-desktop);
+    }
 }
 
 .humanizing__button {
@@ -68,6 +108,11 @@
         color: var(--clr-very-dark-violet);
         background-color: var(--clr-very-light-gray);
     }
+
+    @media (min-width: $desktop) {
+        margin-top: 2.8rem;
+  
+    }
 }
 
 .humanizing__illustration--right-mobile {
@@ -77,5 +122,29 @@
 
     @media (min-width: $desktop) {
         display: none;
+    }
+}
+
+.humanizing__illustration--right-desktop {
+    display: none;
+
+    @media (min-width: $desktop) {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -8rem;
+        z-index: 9;
+    }
+}
+
+.humanizing__illustration--left-desktop {
+    display: none;
+    
+    @media (min-width: $desktop) {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 42rem;
+        z-index: 9;
     }
 }
