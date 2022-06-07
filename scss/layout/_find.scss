@@ -11,12 +11,14 @@
     background-position: right top;
 
     @media (min-width: $desktop) {
-        display: flex;
-        height: 59.8rem;
-        margin: 10.55rem 13rem 0 16.8rem;
+        display: grid;
+        grid-template-columns: 51% 49%;
+        align-items: center;
+        height: 25rem;
+        margin: 10.55rem 16.5rem 15rem 16.3rem;
+        padding: 0rem 8rem;
         text-align: left;
         background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);
-        background-position: left 5rem;
     }
 }
 
@@ -28,7 +30,7 @@
     line-height: 1.05;    
     
     @media (min-width: $desktop) {
-        padding-right: 4rem;
+        padding-top: 0;
         font-size: var(--fs-h2-desktop);
         line-height: 0.95;
     }
@@ -56,6 +58,7 @@
     }    
     
     @media (min-width: $desktop) {
-        margin-top: 2.8rem;
+        margin-top: 0;
+        justify-self: end;
     }
 }
