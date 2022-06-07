@@ -7,7 +7,7 @@
     background-color: var(--clr--white);
 
     @media (min-width: $desktop) {
-        padding: 10.55rem 13rem 0 16.8rem;
+        padding: 36.7rem 13rem 0 16.8rem;
         text-align: left;
     }
 }
@@ -33,6 +33,13 @@
         padding-right: 4rem;
         font-size: var(--fs-h1-desktop);
         line-height: 0.95;
+
+        &::before {
+            top: -6.4rem;
+            left: 7.5rem;
+            width: 15rem;
+            height: 0.2rem;
+        }
     }
 }
 
@@ -40,7 +47,9 @@
     margin-top: 7rem;
 
     @media (min-width: $desktop) {
-
+        margin-top: 9.3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -48,7 +57,7 @@
     margin-top: 5.5rem;
 
     @media (min-width: $desktop) {
-
+        margin-top: 0;
     }
 }
 
@@ -58,6 +67,10 @@
     margin: 0 auto;
     background-color: var(--clr-grayish-blue);
     border-radius: 50%;
+
+    @media (min-width: $desktop) {
+        margin: 0;
+    }
 }
 
 .different__text-container:first-child .different__illustration-container {
@@ -75,6 +88,10 @@
 .different__text__title {
     margin-top: 3.5rem;
     font-size: var(--fs-h3-mobile);
+
+    @media (min-width: $desktop) {
+        margin-top: 3.7rem;
+    }
 }
 
 .different__text__text {
@@ -86,7 +103,7 @@
     line-height: 1.6;
 
     @media (min-width: $desktop) {
-        margin-top: 2.5rem;
+        margin-top: 1.8rem;
         padding: 0;
         padding-right: 3rem;
         font-size: var(--fs-normal-desktop);
