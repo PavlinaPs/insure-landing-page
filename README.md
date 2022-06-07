@@ -54,37 +54,38 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is a great challenge, I used a lot what I've learned in  previous challenges:
+  - multiple backgrounds
+  - decision if an illustration should be styled as an \<img> element in HTML or  as an element's background or a pseudo-element
+  - hamburger menu, I felt pretty comfortable with the JavaScript
+  - nice CSS selectors: 
+    ```css
+    .footer__contact-group li:not(:first-child) a:hover {
+        text-decoration: underline;
+    }
+    ```
+    ```css
+    .header__nav.open ~ .header__hamburger {
+      display: none;
+    }
+    ```
+  - changed svg's fill color on hover
+  - I love CSS grid
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I really like the footer in this challenge. I think an effective footer is very important, users expect to find the information there and find it quickly. This footer is neatly sectioned and simple. Just perfect.
 
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I need to optimize the process of styling the hamburger menu. So far it seems the best way to style it is to style the desktop menu first and then in @media style the hidden mobile menu. Which is not the mobile first workflow. I even think the easiest way is to use max-width in @media. Just for the section with navigation.
+
+I would also like to plan for more mixins in next layout. I would like to try to use them kind of like utility classes (which I don't like much, I always forget they are in html file and then wonder why things are behaving the way they do..).
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com)
-- [Example resource 2](https://www.example.com)
+This time I used only CSS selectors Cheat Sheet which I received in Kyle Cook / WDS's mailings. It's great, as is Kyle.
 
 ## Author
 
