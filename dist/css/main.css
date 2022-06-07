@@ -52,7 +52,6 @@ a {
 
 body {
   min-height: 100vh;
-  font-family: var(--ff);
   font-weight: var(--fw-regular);
   font-size: var(--fs-normal-mobile);
   background-color: var(--clr-very-light-gray);
@@ -178,7 +177,7 @@ body {
   border: 0.2rem solid var(--clr-very-dark-violet);
 }
 .header__nav__item:last-child a {
-  color: var(---clr-very-dark-violet);
+  color: var(--clr-very-dark-violet);
 }
 .header__nav__item:last-child:hover, .header__nav__item:last-child:focus {
   background-color: var(--clr-very-dark-violet);

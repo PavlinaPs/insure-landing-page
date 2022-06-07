@@ -1,8 +1,7 @@
 @use '../abstracts/' as *;
 
 body {
-    min-height: 100vh;   
-    font-family: var(--ff);
+    min-height: 100vh;
     font-weight: var(--fw-regular);
     font-size: var(--fs-normal-mobile);
     background-color: var(--clr-very-light-gray);

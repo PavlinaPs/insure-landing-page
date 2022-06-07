@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://github.com/PavlinaPs/insure-landing-page
+- Live Site URL: https://pavlinaps.github.io/insure-landing-page/
 
 ## My process
 
