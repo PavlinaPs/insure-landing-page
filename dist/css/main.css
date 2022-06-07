@@ -37,12 +37,12 @@ a {
   --fs-normal-mobile: 1.6rem;
   --fs-nav-mobile: 1.9rem;
   --fs-h1-mobile: 4.8rem;
-  --fs-button-mobile: 1.3rem;
+  --fs-h2-mobile: 3.8rem;
   --fs-h3-mobile: 2.8rem;
+  --fs-button-mobile: 1.3rem;
   --fs-normal-desktop: 1.6rem;
   --fs-nav-desktop: 1.4rem;
   --fs-h1-desktop: 7.1rem;
-  --fs-h2-mobile: 2.8rem;
   --fs-normal-desktop: 1.6rem;
   --fs-small-desktop: 1.8rem;
   --fs-smaller-desktop: 1.65rem;
@@ -95,7 +95,6 @@ body {
   text-transform: uppercase;
   background-color: var(--clr-white);
   z-index: 10;
-  border: 1px solid dodgerblue;
 }
 @media (max-width: 64.9999rem) {
   .landing__header {
@@ -476,5 +475,66 @@ body {
     padding: 0;
     padding-right: 3rem;
     font-size: var(--fs-normal-desktop);
+  }
+}
+
+.landing__find {
+  margin: 8.4rem 2.4rem 0;
+  height: 34.4rem;
+  color: var(--clr-white);
+  text-align: center;
+  background-color: var(--clr-dark-violet);
+  background-image: url(../../images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+@media (min-width: 65em) {
+  .landing__find {
+    display: flex;
+    height: 59.8rem;
+    margin: 10.55rem 13rem 0 16.8rem;
+    text-align: left;
+    background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);
+    background-position: left 5rem;
+  }
+}
+
+.find__title {
+  padding-top: 7.4rem;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h2-mobile);
+  font-weight: var(--fw-regular);
+  line-height: 1.05;
+}
+@media (min-width: 65em) {
+  .find__title {
+    padding-right: 4rem;
+    font-size: var(--fs-h2-desktop);
+    line-height: 0.95;
+  }
+}
+
+.find__button {
+  width: 16rem;
+  margin-top: 3.8rem;
+  padding: 1.1rem 0 1rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-button-mobile);
+  color: var(--clr-very-light-gray);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: transparent;
+  border: 0.2rem solid var(--clr-very-light-gray);
+  cursor: pointer;
+}
+.find__button:hover, .find__button:focus {
+  font-weight: var(--fw-bold);
+  color: var(--clr-very-dark-violet);
+  background-color: var(--clr-very-light-gray);
+}
+@media (min-width: 65em) {
+  .find__button {
+    margin-top: 2.8rem;
   }
 }/*# sourceMappingURL=main.css.map */

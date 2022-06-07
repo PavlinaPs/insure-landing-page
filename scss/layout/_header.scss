@@ -21,8 +21,6 @@
     background-color: var(--clr-white);
     z-index: 10;
 
-    border: 1px solid dodgerblue;
-
     @media (max-width: $max-mobile) {
         width: 37.5rem;
         padding: 0 2rem 0 2rem;

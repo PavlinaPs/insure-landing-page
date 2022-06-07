@@ -1,0 +1,61 @@
+@use '../abstracts/' as *;
+
+.landing__find {
+    margin: 8.4rem 2.4rem 0;
+    height: 34.4rem;
+    color: var(--clr-white);
+    text-align: center;
+    background-color: var(--clr-dark-violet);
+    background-image: url(../../images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @media (min-width: $desktop) {
+        display: flex;
+        height: 59.8rem;
+        margin: 10.55rem 13rem 0 16.8rem;
+        text-align: left;
+        background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);
+        background-position: left 5rem;
+    }
+}
+
+.find__title {
+    padding-top: 7.4rem;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-h2-mobile);
+    font-weight: var(--fw-regular);
+    line-height: 1.05;    
+    
+    @media (min-width: $desktop) {
+        padding-right: 4rem;
+        font-size: var(--fs-h2-desktop);
+        line-height: 0.95;
+    }
+}
+
+.find__button {
+    width: 16rem;
+    margin-top: 3.8rem;
+    padding: 1.1rem 0 1rem;
+    font-family: var(--ff-body);
+    font-size: var(--fs-button-mobile);
+    color: var(--clr-very-light-gray);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    border: 0.2rem solid var(--clr-very-light-gray);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        font-weight: var(--fw-bold);
+        color: var(--clr-very-dark-violet);
+        background-color: var(--clr-very-light-gray);
+    }    
+    
+    @media (min-width: $desktop) {
+        margin-top: 2.8rem;
+    }
+}
