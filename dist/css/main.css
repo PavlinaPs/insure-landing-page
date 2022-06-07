@@ -38,11 +38,11 @@ a {
   --fs-nav-mobile: 1.9rem;
   --fs-h1-mobile: 4.8rem;
   --fs-button-mobile: 1.3rem;
+  --fs-h3-mobile: 2.8rem;
   --fs-normal-desktop: 1.6rem;
   --fs-nav-desktop: 1.4rem;
   --fs-h1-desktop: 7.1rem;
   --fs-h2-mobile: 2.8rem;
-  --fs-h3-mobile: 2.4rem;
   --fs-normal-desktop: 1.6rem;
   --fs-small-desktop: 1.8rem;
   --fs-smaller-desktop: 1.65rem;
@@ -365,7 +365,7 @@ body {
 }
 
 .landing__different {
-  position: relative;
+  padding-top: 17.2rem;
   color: var(--clr-very-dark-violet);
   text-align: center;
   background-color: var(--clr--white);
@@ -374,5 +374,77 @@ body {
   .landing__different {
     padding: 10.55rem 13rem 0 16.8rem;
     text-align: left;
+  }
+}
+
+.different__title {
+  position: relative;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h1-mobile);
+  font-weight: var(--fw-regular);
+}
+.different__title::before {
+  content: "";
+  position: absolute;
+  top: -3.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 0.1rem;
+  background-color: var(--clr-dark-grayish-violet);
+}
+@media (min-width: 65em) {
+  .different__title {
+    padding-right: 4rem;
+    font-size: var(--fs-h1-desktop);
+    line-height: 0.95;
+  }
+}
+
+.different__grid-container {
+  margin-top: 7rem;
+}
+.different__text-container:not(:first-child) {
+  margin-top: 5.5rem;
+}
+.different__illustration-container {
+  width: 8.8rem;
+  height: 8.8rem;
+  margin: 0 auto;
+  background-color: var(--clr-grayish-blue);
+  border-radius: 50%;
+}
+
+.different__text-container:first-child .different__illustration-container {
+  background-image: url(../../images/icon-snappy-process.svg);
+}
+
+.different__text-container:nth-child(2) .different__illustration-container {
+  background-image: url(../../images/icon-affordable-prices.svg);
+}
+
+.different__text-container:nth-child(3) .different__illustration-container {
+  background-image: url(../../images/icon-people-first.svg);
+}
+
+.different__text__title {
+  margin-top: 3.5rem;
+  font-size: var(--fs-h3-mobile);
+}
+
+.different__text__text {
+  margin-top: 1.8rem;
+  padding: 0 1rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-normal-mobile);
+  color: var(--clr-dark-grayish-violet);
+  line-height: 1.6;
+}
+@media (min-width: 65em) {
+  .different__text__text {
+    margin-top: 2.5rem;
+    padding: 0;
+    padding-right: 3rem;
+    font-size: var(--fs-normal-desktop);
   }
 }/*# sourceMappingURL=main.css.map */
