@@ -1,7 +1,16 @@
 @use '../abstracts/' as *;
 
 .landing__find {
-    margin: 8.4rem 2.4rem 0;
+    height: 48.5rem;
+    background-color: var(--clr-white);
+
+    @media (min-width: $desktop) {
+        height: 40rem;
+    }
+}
+
+.find__container {
+    margin: 14.1rem 2.4rem 0;
     height: 34.4rem;
     color: var(--clr-white);
     text-align: center;
@@ -15,7 +24,7 @@
         grid-template-columns: 51% 49%;
         align-items: center;
         height: 25rem;
-        margin: 10.55rem 16.5rem 15rem 16.3rem;
+        margin: 15.7rem 16.5rem 0 16.3rem;
         padding: 0rem 8rem;
         text-align: left;
         background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);

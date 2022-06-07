@@ -1,0 +1,119 @@
+@use '../abstracts/' as *;
+
+.landing__footer {
+    height: 102.5rem;
+    background-color: var(--clr-very-light-gray);
+    background-image: url(../../images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop) {
+        height: 39.1rem;
+        padding: 0 16.5rem 0 16.3rem;
+        background-image: url(../../images/bg-pattern-footer-desktop.svg);
+    }
+}
+
+.footer__logo-socials {
+    padding: 8.7rem 2rem 0;
+
+    @media (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6rem 0 2.8rem;
+    }
+}
+
+.footer__logo {
+    margin: 0 auto;
+
+    @media (min-width: $desktop) {
+        margin: 0;
+    }
+}
+
+.footer__socials {
+    @include flex-center;
+    gap: 1.6rem;
+    margin: 3.3rem auto 3.6rem;
+
+    @media (min-width: $desktop) {
+        margin: 0;
+        padding-top: 0.28rem;
+    }
+}
+
+.footer__social:hover svg path {
+    fill: var(--clr-very-dark-violet);
+}
+
+.footer__divider {
+    margin: 0 2.5rem;
+    color: var(--clr-dark-grayish-violet);
+
+    @media (min-width: $desktop) {
+        margin: 0;
+    }
+}
+
+.footer__contacts-container {
+    font-family: var(--ff-body);
+    font-size: var(--fs-footer-mobile);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-grayish-violet);
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+        display: grid;
+        grid-template-columns: 25.5% 25.8% 25.7% 23%;
+        padding-top: 3rem;
+        font-size: var(--fs-footer-desktop);
+        letter-spacing: 0.1rem;
+        text-align: left;
+    }
+}
+
+/* contact groups */
+.footer__contact-group:first-child {
+    margin-top: 3.9rem;
+
+    @media (min-width: $desktop) {
+        margin-top: 0;
+    }
+}
+
+.footer__contact-group:not(:first-child) {
+    margin-top: 4rem;
+
+    @media (min-width: $desktop) {
+        margin-top: 0;
+    }
+}
+
+/* individual contact group items */
+.footer__contact-group li {
+    margin-top: 1.55rem;
+    color: var(--clr-dark-grayish-violet);
+
+    @media (min-width: $desktop) {
+        margin-top: 1.5rem;
+    }
+}
+
+.footer__contact-group li:nth-child(2) {
+    margin-top: 3.65rem;
+
+    @media (min-width: $desktop) {
+        margin-top: 3.6rem;
+    }
+}
+
+.footer__contact-group li:not(:first-child) a:hover {
+    text-decoration: underline;
+}
+
+.footer__contacts-container a {
+    color: var(--clr-very-dark-violet);
+}

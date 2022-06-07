@@ -40,10 +40,12 @@ a {
   --fs-h2-mobile: 3.8rem;
   --fs-h3-mobile: 2.8rem;
   --fs-button-mobile: 1.3rem;
+  --fs-footer-mobile: 1.3rem;
   --fs-normal-desktop: 1.6rem;
   --fs-nav-desktop: 1.4rem;
   --fs-h1-desktop: 7.1rem;
   --fs-h2-desktop: 5.5rem;
+  --fs-footer-desktop: 1.35rem;
   --fs-normal-desktop: 1.6rem;
   --fs-small-desktop: 1.8rem;
   --fs-smaller-desktop: 1.65rem;
@@ -479,7 +481,17 @@ body {
 }
 
 .landing__find {
-  margin: 8.4rem 2.4rem 0;
+  height: 48.5rem;
+  background-color: var(--clr-white);
+}
+@media (min-width: 65em) {
+  .landing__find {
+    height: 40rem;
+  }
+}
+
+.find__container {
+  margin: 14.1rem 2.4rem 0;
   height: 34.4rem;
   color: var(--clr-white);
   text-align: center;
@@ -489,12 +501,12 @@ body {
   background-position: right top;
 }
 @media (min-width: 65em) {
-  .landing__find {
+  .find__container {
     display: grid;
     grid-template-columns: 51% 49%;
     align-items: center;
     height: 25rem;
-    margin: 10.55rem 16.5rem 15rem 16.3rem;
+    margin: 15.7rem 16.5rem 0 16.3rem;
     padding: 0rem 8rem;
     text-align: left;
     background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);
@@ -540,4 +552,145 @@ body {
     margin-top: 0;
     justify-self: end;
   }
+}
+
+.landing__footer {
+  height: 102.5rem;
+  background-color: var(--clr-very-light-gray);
+  background-image: url(../../images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+}
+@media (min-width: 65em) {
+  .landing__footer {
+    height: 39.1rem;
+    padding: 0 16.5rem 0 16.3rem;
+    background-image: url(../../images/bg-pattern-footer-desktop.svg);
+  }
+}
+
+.footer__logo-socials {
+  padding: 8.7rem 2rem 0;
+}
+@media (min-width: 65em) {
+  .footer__logo-socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 0 2.8rem;
+  }
+}
+
+.footer__logo {
+  margin: 0 auto;
+}
+@media (min-width: 65em) {
+  .footer__logo {
+    margin: 0;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 3.3rem auto 3.6rem;
+}
+@media (min-width: 65em) {
+  .footer__socials {
+    margin: 0;
+    padding-top: 0.28rem;
+  }
+}
+
+.footer__social:hover svg path {
+  fill: var(--clr-very-dark-violet);
+}
+
+.footer__divider {
+  margin: 0 2.5rem;
+  color: var(--clr-dark-grayish-violet);
+}
+@media (min-width: 65em) {
+  .footer__divider {
+    margin: 0;
+  }
+}
+
+.footer__contacts-container {
+  font-family: var(--ff-body);
+  font-size: var(--fs-footer-mobile);
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark-grayish-violet);
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 65em) {
+  .footer__contacts-container {
+    display: grid;
+    grid-template-columns: 25.5% 25.8% 25.7% 23%;
+    padding-top: 3rem;
+    font-size: var(--fs-footer-desktop);
+    letter-spacing: 0.1rem;
+    text-align: left;
+  }
+}
+
+/* contact groups */
+.footer__contact-group:first-child {
+  margin-top: 3.9rem;
+}
+@media (min-width: 65em) {
+  .footer__contact-group:first-child {
+    margin-top: 0;
+  }
+}
+
+.footer__contact-group:not(:first-child) {
+  margin-top: 4rem;
+}
+@media (min-width: 65em) {
+  .footer__contact-group:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+/* individual contact group items */
+.footer__contact-group li {
+  margin-top: 1.55rem;
+  color: var(--clr-dark-grayish-violet);
+}
+@media (min-width: 65em) {
+  .footer__contact-group li {
+    margin-top: 1.5rem;
+  }
+}
+
+.footer__contact-group li:nth-child(2) {
+  margin-top: 3.65rem;
+}
+@media (min-width: 65em) {
+  .footer__contact-group li:nth-child(2) {
+    margin-top: 3.6rem;
+  }
+}
+
+.footer__contact-group li:not(:first-child) a:hover {
+  text-decoration: underline;
+}
+
+.footer__contacts-container a {
+  color: var(--clr-very-dark-violet);
+}
+
+.attribution {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
