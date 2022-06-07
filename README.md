@@ -33,7 +33,7 @@ Users should be able to:
 
 | Mobile layout |
 |:--:|
-![Mobile layout](./screenshots/screenshot-mobile-top.jpg) ![Mobile layout](./screenshots/screenshot-mobile-middle.jpg)
+![Mobile layout](./screenshots/screenshot-mobile-top.jpg) ![Mobile layout](./screenshots/screenshot-mobile-middle.jpg) ![Mobile layout](./screenshots/screenshot-mobile-hamburger-open.jpg)
 
 ### Links
 
